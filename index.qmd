@@ -1,0 +1,462 @@
+---
+title: "Note Technique Ciblage de l'assistance Saisonnière"
+subtitle: "Méthodologie et processus de ciblage"
+author: 
+  "Idrissa Dabo/Head of RAM"
+date-modified: "2025"
+date-format: "YYYY"
+title-block-banner: "#D7DBDD"
+format: 
+  html:
+    
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    theme: cosmo
+    highlight-style: github
+    code-fold: true
+    fig-width: 8
+    fig-height: 6
+  
+lang: fr
+language: 
+  title-block-author-single: "RAM WFP Cameroon"
+  title-block-modified: "Last Update"
+---
+
+```{r echo=FALSE}
+htmltools::img(src = knitr::image_uri(file.path("image/WFP-logo.png")), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px;',width = 200,height = 145)
+```
+
+## Contexte
+
+La région de l’Extrême-Nord est connue comme l’une des plus affectées par l’insécurité alimentaire au Cameroun. Plusieurs facteurs expliquent cette situation.
+
+En premier lieu, le climat aride de la région, marqué par des sécheresses prolongées sur près de trois mois (mars à mai), constitue un déterminant majeur. Selon les données de Worldata 2024, l’Extrême-Nord présente l’un des climats les plus secs du pays, avec une température moyenne journalière de 36°C. L’année 2024 a d’ailleurs enregistré des pics exceptionnels, atteignant 45 à 50°C entre mars et mai.
+
+À cela s’ajoutent des inondations fluviales récurrentes. Entre 2000 et 2024, celles-ci ont couvert en moyenne 305 135 hectares en novembre, affectant environ 318 établissements et exposant près de 394 376 personnes. Sept années ont connu des crues particulièrement importantes (2001, 2010, 2012, 2015, 2019, 2022 et 2024). Parmi elles, 2001, 2012 et 2024 se distinguent par des inondations dépassant 500 000 hectares, celle de 2012 étant la plus marquante de la période étudiée, suivie par celle de 2024.
+
+![](image/clipboard-3511095238.png)
+
+En janvier 2024, dans le cadre des interventions nutritionnelles régulières, le PAM, en partenariat avec Plan International et le Ministère de la Santé Publique (MINSANTE), a mené un dépistage nutritionnel de masse auprès des enfants de 6 à 59 mois dans 14 districts sanitaires répartis dans quatre départements :
+
+-   Mayo Tsanaga (Mayo-Moskota, Mokolo),
+
+-   Logone-et-Chari (Blangoua, Fotokol, Goulfey),
+
+-   Mayo Sava (Kolofata, Mora),
+
+-   Mayo Danay (Maga, Vélé, Kai-Kai).
+
+Les résultats ont révélé des niveaux variables de malnutrition aiguë globale (MAG). Par exemple, le district de Maga a enregistré une prévalence de 16,9 %, indiquant un besoin urgent d’intervention. Fait notable, les mois de janvier et février – qui sont habituellement ceux où les taux de malnutrition infantile sont les plus faibles – présentaient déjà des prévalences préoccupantes, selon une analyse saisonnière menée par le PAM et le MINSANTE à Maroua.
+
+À la suite de ce dépistage, le PAM a mis en place un programme de gestion de la malnutrition aiguë modérée (MAM) ciblant les enfants de moins de cinq ans ainsi que les femmes enceintes et allaitantes, en priorisant les districts les plus affectés. Un accord de partenariat a été établi pour fournir des compléments alimentaires spécialisés destinés à traiter et prévenir la malnutrition.
+
+Face à cette situation récurrente de vulnérabilité, le Programme Alimentaire Mondial (PAM) déploie :
+
+une assistance saisonnière,
+
+afin de soutenir les populations affectées pendant les périodes de soudure et lors des déplacements forcés.
+
+L’exercice de ciblage mené par le PAM vise à :
+
+-   déterminer les zones prioritaires d’intervention pour l’assistance saisonnière ;
+
+-   fournir une liste des bénéficiaires comprenant les ménages les plus vulnérables.
+
+Ce ciblage permettra de planifier une assistance aux ménages les plus vulnérables de l’Extrême-Nord.
+
+## Ciblage Géographique
+
+Les résultats du Cadre Harmonisé (CH) constituent le point d'entrée pour la programmation de l'assistance pendant la période de soudure. L'analyse du CH permet de déterminer le degré de sévérité de l'insécurité alimentaire et d'estimer les populations se trouvant dans les différentes phases d'insécurité alimentaire au niveau de chaque département.
+
+Compte tenu des ressources limitées, le PAM procède à une analyse de priorisation des zones d'intervention afin de cibler au mieux l'assistance.
+
+### Priorisation des Départements
+
+le Point d'entrée pour la priorisation repose sur les données de référence en sécurité alimentaire et nutritionnelle
+
+-   **Sécurité alimentaire** : Les données proviennent du Cadre Harmonisé
+-   **Nutrition** : L'analyse s'appuie sur les résultats issus des campagnes de dépistage nutritionnel (*nutrition screening*)
+
+Le deuxième point d’entrée est constitué par les facteurs aggravants, tels que :
+
+-   Les conflits
+-   Les inondations\
+-   Les déplacements de populations etc.
+
+Après chaque CH la priorisation des départements se fait comme suit :
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+# Création du tableau de priorisation
+priorite_data <- data.frame(
+  Priorité = c("Priorité 1", "Priorité 2"),
+  Critères = c(
+    "Départements classés en Phase 4 (urgence)",
+    "Départements classés en Phase 3 (crise) mais ayant également une part de population en Phase 4 (urgence)"
+  )
+)
+
+kable(priorite_data, 
+      caption = "Système de priorisation des départements",
+      col.names = c("Niveau de priorité", "Critères de classification")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+::: callout-note
+Cette priorisation est complétée par les résultats du dépistage nutritionnel et l'analyse des facteurs aggravants (*conflits*, *inondations*, *déplacements de populations* etc.).
+:::
+
+D'après les résultats du dernier Cadre Harmonisé de mars 2025, les départements suivants ont été retenus comme prioritaires pour l'assistance saisonnière :
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# Données des départements prioritaires
+dept_data <- data.frame(
+  Départements = c("Logone-et-Chari", "Mayo-Danay", "Mayo-Sava", "Mayo-Tsanaga"),
+  Bénéficiaires = c(20194, 6041, 16240, 19324)
+)
+
+# Formatage des nombres avec séparateur de milliers
+dept_data$Bénéficiaires <- format(dept_data$Bénéficiaires, big.mark = " ")
+
+kable(dept_data, 
+      caption = "Départements prioritaires et nombre de bénéficiaires",
+      align = c("l", "r")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  add_header_above(c(" " = 1, "Nombre de bénéficiaires par rapport au caseload" = 1))
+```
+
+**Caseload par département et par Arrondissement**
+
+:::::: columns
+::: {.column width="40%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Répartition des bénéficiaires par département"
+
+library(ggplot2)
+library(plotly)
+
+# Création du graphique
+dept_numeric <- data.frame(
+  Départements = c("Logone-et-Chari", "Mayo-Danay", "Mayo-Sava", "Mayo-Tsanaga"),
+  Bénéficiaires = c(20194, 6041, 16240, 19324)
+)
+
+graph <- ggplot(dept_numeric, aes(x = reorder(Départements, Bénéficiaires), y = Bénéficiaires,
+                                  text = paste("Département:", Départements, 
+                                               "<br>Bénéficiaires:", format(Bénéficiaires, big.mark = " ")))) +
+  geom_col(fill = "steelblue", alpha = 0.8) +
+  labs(x = "Départements", 
+       y = "Nombre de bénéficiaires",
+       title = "Répartition des bénéficiaires\npar département prioritaire") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+ggplotly(graph, tooltip = "text")
+
+```
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="50%"}
+```{r echo=F, warning=FALSE, message=FALSE, error=FALSE}
+library(leaflet)
+library(dplyr)
+library(sf)
+library(RColorBrewer)
+
+seasonal_data <- read.csv("echo_data.csv")
+shape_cmr <- st_read("cmr_admbnda_inc_20180104_SHP/cmr_admbnda_adm3_inc_20180104.shp",quiet = T)
+
+# setdiff(seasonal_data$ADM3_FR,shape_cmr$ADM3_FR)
+seasonal_data$popup_text <- paste0(
+  
+  "Département: ", seasonal_data$ADM2_FR, "<br/>",
+  "<strong>", seasonal_data$ADM3_FR, "</strong><br/>",
+  "Caseload: ", format(seasonal_data$Plan, big.mark = " "), "<br/>"
+)
+
+adminpopup <- paste0(
+  
+  "Département: ", seasonal_data$ADM2_FR, "<br/>",
+  "<strong>", seasonal_data$ADM3_FR, "</strong><br/>",
+  "Caseload: ", format(seasonal_data$Plan, big.mark = " "), "<br/>"
+) |> lapply(htmltools::HTML)
+
+seasonal_data <- seasonal_data |> left_join(
+  shape_cmr, by = "ADM3_FR"
+)
+
+seasonal_data <- st_as_sf(seasonal_data)
+
+pal_plan <- leaflet::colorNumeric("PiYG", domain = seasonal_data$Plan) 
+seasonal_data %>%  leaflet() %>%
+      addProviderTiles("CartoDB.Positron") %>%
+      # setView(lat= 13, lng=3, zoom=4) %>%
+      addPolygons(
+        fillColor = ~pal_plan(seasonal_data$Plan),
+        fillOpacity = 0.7,
+        popup = ~popup_text,
+        color = "white",
+        opacity = 0.7,
+        weight = 2,
+        dashArray = "2",
+        highlight = highlightOptions(
+          weight = 3,
+          color = "black",
+          fillOpacity = 1,
+          bringToFront = TRUE),
+        label = adminpopup,
+        labelOptions = labelOptions(
+          textsize = "12px",
+          direction = "auto"
+        )
+
+      ) |> addLegend(
+    pal = pal_plan,
+    values = ~Plan,
+    opacity = 0.7,
+    title = "Caseload",
+    position = "bottomright",
+    labFormat = labelFormat(big.mark = " ")
+  ) 
+# |> addControl(
+#     html = "<div style='background: rgba(255,255,255,0.8); padding: 3px; border-radius: 3px;  text-align: center;'>
+#             
+#             <small>Caseload par Arrondissement</small>
+#             </div>",
+#     position = "topright"
+#   )
+
+
+
+```
+:::
+::::::
+
+### Priorisation des Arrondissements et Villages
+
+La priorisation des arrondissements et villages a été menée en concertation avec les autorités administratives et sectorielles. L'objectif était de prendre en compte les zones déjà bénéficiaires d'activités du PULCCA ou du PAM (GFD) afin d'éviter les doublons.
+
+Une matrice de priorisation a été administrée aux Délégués d’arrondissement du **MINADER**, aux Sous-Préfets, aux Maires, ainsi qu’aux représentants des ministères sectoriels tels que *MINEPIA*, *MINEDUB*, *MINAS* et *MINSANTE*.
+
+Cette matrice a pris en compte plusieurs critères, notamment :
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+criteres_data <- data.frame(
+  Critères = c(
+    "Nombre de ménages touchés par les inondations",
+    "Pertes en logements", 
+    "Pertes en bétail et vergers",
+    "Nombre de cas de paludisme pendant la saison des pluies chez les femmes enceintes et les enfants",
+    "Prix des denrées alimentaires",
+    "Superficie agricole touchée par les inondations (en hectares)"
+  )
+)
+
+kable(criteres_data, 
+      caption = "Critères utilisés dans la matrice de priorisation",
+      col.names = "Critères de priorisation des villages") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+::: callout-important
+-   Les villages identifiés ont été **triangulés** avec la carte de la malnutrition globale ci-dessous
+-   Les villages bénéficiant déjà d'assistances similaires (filets sociaux) ont été **écartés** dans la plupart des cas pour éviter les doublons
+:::
+
+![](image/malnut.png){fig-align="center" width="349"}
+
+## Ciblage des bénéficiaires
+
+Au Cameroun, nous combinons une approche basée sur la communauté et une approche basée sur les données.
+
+### Identification des critères basées sur les données d'enquêtes.
+
+Nous utilisons les données de l’Enquête Nationale de la Sécurité Alimentaire et Nutritionnelle (ENSAN) pour identifier les critères qui caractérisent le mieux les ménages les plus vulnérables. Sur la base de tests statistiques, les principaux proxys (caractéristiques des ménages, facteurs socio-économiques et possession d’actifs) sont sélectionnés en fonction de leur pertinence et de leur impact potentiel sur le statut d’insécurité alimentaire.
+
+Un modèle de régression logistique est ensuite utilisé pour prédire le statut binaire d’insécurité alimentaire des ménages (sécurité Alimentaire vs. insécurité alimentaire). Ce modèle estime la probabilité qu’un ménage soit en insécurité alimentaire en fonction des variables explicatives. Les odds ratios du modèle sont traduits en scores attribués à chaque critère, et le score total d’un ménage correspond à la somme de ses caractéristiques individuelles.
+
+Les variables significatives, considérées comme critères de vulnérabilité, sont validées par la communauté. Un questionnaire reprenant ces critères est administré aux ménages identifiés comme vulnérables par la communauté, dans le cadre d’un ciblage communautaire participatif.
+
+### Ciblage communautaire participatif.
+
+La méthodologie s'inspire de la démarche HEA, utilisant des critères de vulnérabilité et la catégorisation socio-professionnelle. Elle comprend plusieurs étapes :
+
+**Vue d’ensemble du processus**
+
+```{mermaid}
+graph TD
+    A[Étape 1: Assemblée Générale de présentation] --> B[Étape 2: Constitution des comités]
+    B --> C[Étape 3: Identification des groupes socio-économiques]
+    C --> D[Étape 4: Triangulation des résultats]
+    D --> E[Étape 5: Vérification et collecte de données des ménages]
+    E --> F[Étape 6: Validation communautaire]
+    F --> G[Étape 7: Mécanisme de redevabilité]
+    
+```
+
+-   **Étape 1** : *Assemblée Générale de présentation*
+
+**Objectifs :** - Informer la communauté sur l'objectif de la mission - Présenter la démarche : constitution et formation des comités, utilisation des critères de vulnérabilité, validation des listes
+
+-   **Étape 2** : *Constitution des comités*
+
+1.  Comité de ciblage
+
+**Rôles :** - Appuie l'enquête préliminaire des ménages - Élabore et valide les critères socio-économiques - Accompagne la validation des listes lors de l'Assemblée Générale
+
+**Composition :** - Leaders communautaires (religieux, traditionnels, administratifs, communaux) - Informateurs clés - Personnes ressources choisies par la communauté
+
+**Profil requis :** - Bonne moralité et crédibilité reconnue - Connaissance des quartiers et ménages - Humilité, sagesse et probité - Capacité de contribution efficace
+
+2.  Comité de plaintes
+
+**Rôle :** Recueille les plaintes de la communauté et les transmet au comité local et au PAM
+
+-   **Étape 3** : *Identification des groupes socio-économiques*
+
+Cette étape consiste à définir avec la communauté les caractéristiques types des ménages pour chaque catégorie socio-économique (minimum 4 catégories).
+
+::: callout-tip
+Les catégories sont définées en utilisant une **catégorisation** avec l'appui d'informateurs clés.
+:::
+
+-   **Étape 4** : *Triangulation des résultats*
+
+1.  Confrontation des résultats des comités pour obtenir une liste consensuelle
+
+2.  Cas litigieux portés devant l'Assemblée Générale
+
+3.  Validation et adoption de la liste finale après appréciation par l'Assemblée Générale
+
+-   **Étape 5** : *Vérification et collecte de données des ménages*
+
+Une enquête porte-à-porte est menée auprès des ménages à l’aide d’un questionnaire intégrant les critères identifiés à partir des données des enquêtes ENSAN et validés par la communauté. Les données collectées sont ensuite nettoyées et utilisées pour réaliser un scoring des ménages, permettant de les classifier et de les identifier selon leur niveau de vulnérabilité. La liste ainsi obtenue est ensuite présentée à la communauté pour une validation communautaire.
+
+**Liste des critères utilisés**
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+criteres_ciblage <- data.frame(
+  Catégorie = c(
+    rep("Démographique", 5),
+    rep("Socio-économique", 3),
+    rep("Vulnérabilité", 2),
+    rep("Éducation", 1),
+    rep("Conditions de vie", 3),
+    rep("Actifs", 2)
+  ),
+  Critères = c(
+    "Chef de ménage est une femme",
+    "Taille du ménage", 
+    "Statut matrimonial - veuve avec enfants en charge",
+    "Ménage avec beaucoup d'enfants de 0-5 ans",
+    "Ratio de dépendance élevé",
+    "Statut d'occupation du logement",
+    "Rapport de féminité",
+    "Indice de surpeuplement", 
+    "Ménage dirigé par une personne handicapée",
+    "Présence de personne handicapée (autre que le chef)",
+    "Niveau d'étude du chef de ménage",
+    "État de l'habitation (toit, mur, sol)",
+    "Source d'énergie",
+    "Conditions générales du logement",
+    "Possession de bétail",
+    "Possession d'actifs productifs"
+  )
+)
+
+kable(criteres_ciblage, 
+      caption = "Critères de ciblage par catégorie") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>%
+  collapse_rows(columns = 1, valign = "top")
+```
+
+<!-- **Seuils de validation :** -->
+
+<!-- ```{r} -->
+
+<!-- #| echo: false -->
+
+<!-- #| warning: false -->
+
+<!-- #| message: false -->
+
+<!-- seuils_data <- data.frame( -->
+
+<!--   `Taux d'erreur` = c("≤ 10%", "> 10%"), -->
+
+<!--   Action = c("Liste validée après appréciation par l'Assemblée Générale", "Ciblage à refaire") -->
+
+<!-- ) -->
+
+<!-- kable(seuils_data,  -->
+
+<!--       caption = "Seuils de validation pour la vérification", -->
+
+<!--       col.names = c("Taux d'erreur d'inclusion/exclusion", "Action requise")) %>% -->
+
+<!--   kable_styling(bootstrap_options = c("striped", "hover", "condensed")) -->
+
+<!-- ``` -->
+
+-   **Étape 6** : *Validation communautaire*
+
+Cette étape finale garantit l'unicité et la fiabilité des listes sans remettre en cause les classifications validées par les communautés.
+
+**Processus en deux phases :**
+
+1.  **Première Assemblée Générale :** Présentation des listes des potentiels bénéficiaires
+2.  **Deuxième Assemblée Générale :** Validation de la liste consensuelle
+
+**Résultats :** - Chaque ménage prend connaissance de son classement - Listes transmises au comité régional avec procès-verbal signé et transmission des données et procès-verbaux au PAM pour planification des assistances
+
+-   **Étape 7** : *Mécanisme de redevabilité*
+
+1.  **Numéro vert *8099*** mis à disposition pour les réclamations
+
+2.  Traitement par le PAM, comités locaux et partenaires
+
+3.  Retour obligatoire à chaque plaignant
+
+------------------------------------------------------------------------
+
+::: {.callout-note collapse="false"}
+## Références et contacts
+
+-   **Programme Alimentaire Mondial (PAM) Cameroun**
+
+-   **Reasearch Assessement & Monitoring (RAM)**
+
+-   [CO Cameroun RAM Yaoundé](co_cmr_ram_yde@wfp.org)
+:::
